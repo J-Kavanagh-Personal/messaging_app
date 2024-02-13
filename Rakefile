@@ -4,5 +4,3 @@
 require_relative "config/application"
 
 Rails.application.load_tasks
-
-task 'users:send_email'
