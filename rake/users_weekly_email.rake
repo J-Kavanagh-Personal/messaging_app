@@ -9,3 +9,5 @@ namespace :users do
     end
   end
 end
+
+Rake::Task["users:send_email"].invoke

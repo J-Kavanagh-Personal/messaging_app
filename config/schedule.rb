@@ -2,5 +2,5 @@
 
 set :output, "log/cron_log.log"
 every 1.week do
-  rake ""
+  rake "users:send_email"
 end
