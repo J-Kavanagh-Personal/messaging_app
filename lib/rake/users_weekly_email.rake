@@ -1,3 +1,5 @@
+require 'rake'
+
 namespace :users do
   task :send_email do
     total_messages = Message.where("created_at < ?", 1.week.ago )
@@ -10,4 +12,4 @@ namespace :users do
   end
 end
 
-Rake::Task["users:send_email"].invoke
+Rake::Task[users:send_email].invoke
