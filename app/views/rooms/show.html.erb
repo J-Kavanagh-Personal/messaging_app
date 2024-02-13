@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @room %>
+<div class="row">
+  <div class="col-3">
+    <div>
+      <%= link_to "Back to rooms", rooms_path %>
+    </div>
+  </div>
+
+  <div class="col-9 chat-space border border-5">
+    <% if @room.present? %>
+      <div class="mb-5 pb-4">
+        <div id="messages">
+          <% @room.messages.each do |message| %>
+            <%= render(MessageComponent.new(message: message, user: current_user)) %>
+          <% end %>
+        </div>
+      </div>
+      <div class="chat-message-space">
+        <div>
+          <%= render 'messages/form', message: Message.new, room: @room %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
