@@ -8,6 +8,7 @@ class RoomsController < ApplicationController
 
   # GET /rooms/1 or /rooms/1.json
   def show
+    @messages = Message.includes(:user).where(room_id: @room.id)
   end
 
   private

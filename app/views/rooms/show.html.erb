@@ -12,7 +12,7 @@
     <% if @room.present? %>
       <div class="mb-5 pb-4">
         <div id="messages">
-          <% @room.messages.each do |message| %>
+          <% @messages.each do |message| %>
             <%= render(MessageComponent.new(message: message, user: current_user)) %>
           <% end %>
         </div>
