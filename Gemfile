@@ -76,3 +76,5 @@ gem "devise", "~> 4.9"
 gem "view_component"
 
 gem "whenever"
+
+gem "simplecov"
