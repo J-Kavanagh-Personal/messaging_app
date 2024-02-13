@@ -78,3 +78,5 @@ gem "view_component"
 gem "whenever"
 
 gem "simplecov"
+
+gem "rspec"
