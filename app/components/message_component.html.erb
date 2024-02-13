@@ -3,7 +3,7 @@
     <div class="content">
       <%= @message.content %>
     </div>
-    <div class="author">
+    <div class="author" id="author" value="<%= @message.user.email %>">
       <%= @message.user.email %>
     </div>
   </div>

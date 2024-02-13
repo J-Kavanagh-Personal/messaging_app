@@ -9,15 +9,12 @@ consumer.subscriptions.create("RoomChannel", {
     // Called when the subscription has been terminated by the server
   },
 
-  received(data) {
-    console.log(data);
+  received: function (data) {
     const parser = new DOMParser();
     const data_dom = parser.parseFromString(data.html, "text/html");
     const author = document.getElementById('Signed-In-Author');
     const messageContainer = document.getElementById('messages');
-    if(data_dom.querySelector("#message").classList.contains(author.value)) {
-      messageContainer.innerHTML = messageContainer.innerHTML + data.html;
-    } else {
+    if (data_dom.querySelector("#author").getAttribute('value') === author.getAttribute('value')) messageContainer.innerHTML = messageContainer.innerHTML + data.html; else {
       data_dom.querySelector("#message").classList.remove('owner');
       messageContainer.innerHTML = messageContainer.innerHTML + data_dom.documentElement.innerHTML;
     }
