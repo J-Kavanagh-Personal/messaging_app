@@ -2,15 +2,7 @@
 
 This project is a messaging app.
 
-It relies on websockets to work.
-
-This project was made on windows which lead to some creative design choices to get it working i.e redis doesn't 
-really work well on windows and getting sidekiq to work with it locally is delicate dance so there is no sidekiq and 
-redis in this project if I had made this on linux or MacOS I would've used sidekiq and redis.
-
-Another issue due to the windows build is problem with whenever gem as cronjobs are not a windows native feature.
-
-Also this project doesn't use webpacker due to I wanted to try out importmap.
+It relies on websockets to work..
 
 This project uses sqlite as it is a prototype the development database contains data already and accounts.
 
