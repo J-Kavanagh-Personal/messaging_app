@@ -12,4 +12,4 @@ namespace :users do
   end
 end
 
-Rake::Task[users:send_email].invoke
+Rake::Task[users:send_email].execute
