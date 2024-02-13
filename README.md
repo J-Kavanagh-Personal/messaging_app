@@ -8,7 +8,7 @@ This project uses sqlite as it is a prototype the development database contains 
 
 This project can be installed via pulling down from the GitHub.
 
-This requires `ruby "3.0.1"`
+This requires `ruby "3.3.0"`
 
 `bundle install` <- Running this will install all necessary gems.
 
