@@ -80,3 +80,5 @@ gem "whenever"
 gem "simplecov"
 
 gem "rspec"
+
+gem "rspec-rails"
